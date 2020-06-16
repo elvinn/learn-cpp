@@ -25,15 +25,19 @@ int main ()
 
   // explicit type casting operator
   int i;
-  float f = 3.14;
+  float g = 3.14;
   // both ways are valid
-  i = (int) f;
-  i = int (f);
+  i = (int) g;
+  i = int (g);
   cout << i << endl;
 
   // string
   string sectionString = "This is the variables section.";
   cout << sectionString << endl;
+
+  unsigned int uin = 123;
+  string uinString = "Hello " + to_string(uin);
+  cout << uinString << endl;
 
   return 0;
 }
