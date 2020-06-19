@@ -37,3 +37,6 @@
 
 # Idea
 .idea/
+
+# VS Code
+.vscode
