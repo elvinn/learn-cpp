@@ -1,31 +1,24 @@
-// Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 func_template.cpp -o func_template.out
-// -Wall: Warnings
-// -O3: Optimization level - Maximum
+/**
+ * Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 func_template.cpp
+ * -Wall: Warnings
+ * -O3: Optimization level - Maximum
+ */
 
 #include <iostream>
 
 using namespace std;
 
-template <class T>
-T sum(T a, T b) {
+template <class T> T sum(T a, T b) {
   T result = a + b;
   return result;
 }
 
-template <class T, class U>
-bool are_equal(T a, U b) {
-  return a == b;
-}
+template <class T, class U> bool are_equal(T a, U b) { return a == b; }
 
 // determine on compile-time
-template <class T, int N>
-T fixed_multiply (T val)
-{
-  return val * N;
-}
+template <class T, int N> T fixed_multiply(T val) { return val * N; }
 
-int main()
-{
+int main() {
   int a = 1, b = 2;
   int c = sum<int>(a, b);
 

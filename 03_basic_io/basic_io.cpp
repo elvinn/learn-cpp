@@ -1,14 +1,15 @@
-// Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 basic_io.cpp -o basic_io.out
-// -Wall: Warnings
-// -O3: Optimization level - Maximum
+/**
+ * Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 basic_io.cpp
+ * -Wall: Warnings
+ * -O3: Optimization level - Maximum
+ */
 
 #include <iostream>
 #include <sstream>
 
 using namespace std;
 
-int main()
-{
+int main() {
   string name;
   string str;
   int age;
@@ -23,6 +24,6 @@ int main()
   // use stringstream to conver string to number
   stringstream(str) >> age;
 
-  cout << "Hello " << name << ". Your age is " <<  age << ".\n";
+  cout << "Hello " << name << ". Your age is " << age << ".\n";
   return 0;
 }

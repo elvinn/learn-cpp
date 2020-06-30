@@ -1,27 +1,28 @@
-// Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 variables.cpp -o variables.out
-// -Wall: Warnings
-// -O3: Optimization level - Maximum
+/**
+ * Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 variables.cpp
+ * -Wall: Warnings
+ * -O3: Optimization level - Maximum
+ */
 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-// static storage (such as global variables) 
+// static storage (such as global variables)
 // are automatically initialized to zeroes.
 int globale_x;
 
-int main ()
-{
-  // automatic storage (such as local variables) 
+int main() {
+  // automatic storage (such as local variables)
   // are uninitialized and have an undetermined value
   int local_y;
   cout << "globale_x: " << globale_x << ", local_y: " << local_y << endl;
 
   // initialization
-  int a = 5; // c-like initialization 
-  int b (3); // constructor initialization 
-  int c {2}; // uniform initialization, since c++11
+  int a = 5; // c-like initialization
+  int b(3);  // constructor initialization
+  int c{2};  // uniform initialization, since c++11
 
   cout << a + b + c << endl;
 
@@ -36,8 +37,8 @@ int main ()
   int i;
   float g = 3.14;
   // both ways are valid
-  i = (int) g;
-  i = int (g);
+  i = (int)g;
+  i = int(g);
   cout << i << endl;
 
   // string

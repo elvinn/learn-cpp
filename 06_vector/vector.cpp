@@ -1,10 +1,12 @@
-// Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 vector.cpp -o vector.out
-// -Wall: Warnings
-// -O3: Optimization level - Maximum
+/**
+ * Compile: clang++ -std=c++2a -stdlib=libc++ -Wall -O3 vector.cpp
+ * -Wall: Warnings
+ * -O3: Optimization level - Maximum
+ */
 
+#include <cassert>
 #include <iostream>
 #include <vector>
-#include <cassert>
 
 using namespace std;
 
@@ -13,18 +15,18 @@ int main() {
   vector<int> b = {1, 2, 3};
   assert(a == b);
 
-  vector<vector <int>> c = {{1, 2}, {3, 4}};
-  vector<vector <int>> d = {{1, 2}, {3, 4}};
+  vector<vector<int>> c = {{1, 2}, {3, 4}};
+  vector<vector<int>> d = {{1, 2}, {3, 4}};
   assert(c == d);
 
   // Method One: visit by index
-  for(int i = 0; i < a.size(); i++) {
+  for (int i = 0; i < a.size(); i++) {
     cout << a[i] << ',';
   }
   cout << endl;
 
   // Method Two: visit by iterator
-  for(vector<int>::iterator it = a.begin(); it != a.end(); it++) {
+  for (vector<int>::iterator it = a.begin(); it != a.end(); it++) {
     cout << *it << ',';
   }
   cout << endl;
