@@ -17,14 +17,35 @@ int main() {
   vector<vector <int>> d = {{1, 2}, {3, 4}};
   assert(c == d);
 
-  for(int i = 0; i < c.size(); i++) {
+  // Method One: visit by index
+  for(int i = 0; i < a.size(); i++) {
     cout << a[i] << ',';
   }
   cout << endl;
-  
+
+  // Method Two: visit by iterator
   for(vector<int>::iterator it = a.begin(); it != a.end(); it++) {
     cout << *it << ',';
   }
+  cout << endl;
+
+  // Method Two: visit by iterator + auto type
+  for (auto it = a.begin(); it != a.end(); it++) {
+    cout << *it << ',';
+  }
+  cout << endl;
+
+  // Method Three: syntax sugar `:`
+  for (int &num : a) {
+    cout << num << ',';
+  }
+  cout << endl;
+
+  // Method Three: syntax sugar `:` + auto type
+  for (auto num : a) {
+    cout << num << ',';
+  }
+  cout << endl;
 
   return 0;
 }
